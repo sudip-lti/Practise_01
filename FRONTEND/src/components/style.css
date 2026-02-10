@@ -1,0 +1,120 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+
+.header-bg{
+    /* background-color: saddlebrown; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position:absolute;
+    margin-bottom: 1rem;
+    z-index: 5;    
+}
+.heading1{
+    color: rgb(253, 2, 2);
+    /* display: flex; */
+    margin: 1rem 1rem 1rem 1rem; 
+}
+
+.heading2 {
+    list-style-type: none;
+    color: rgb(255, 0, 0);
+    display: flex;
+    align-items: center ;
+    /* flex-direction: row-reverse; */
+    /* float: right; */
+    margin: 1rem 3rem 1rem 1rem; 
+    letter-spacing: 0.5px;
+    
+}
+.heading2 a{ 
+    margin: 0 1rem 0 1rem;
+    cursor: pointer;
+    font-weight: bolder;
+    position: relative;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+    
+}
+
+.heading2 a:before{
+    content: "";
+    position: absolute;
+    /* background: red; */
+    background: linear-gradient(
+        to left,
+        #fd004c,
+        #fe9000,
+        #fff020,
+        #3edf4b,
+        #3363ff,
+        #b102b7
+    );
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom:-0.2em;
+    transition: 1s;
+}
+.heading2 a:hover:before{
+    width: 100%;
+
+}
+.heading2 button{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 5px;
+    background-image:-webkit-linear-gradient(45deg, rgba(242, 148, 6, 0.751) 40%, rgba(103, 47, 143, 0.989) 60%);
+    color: black;
+    border: 2px solid rgb(23, 23, 23);
+    cursor: pointer;
+    font-family: serif;
+
+}
+.heading2 button:hover{
+    background-image:-webkit-linear-gradient(65deg, rgba(227, 139, 7, 0.59) 40%, rgba(145, 25, 236, 0.989) 60%);
+
+}
+.cardh:hover {
+    background-image:-webkit-linear-gradient(65deg, rgba(242, 147, 6, 0.441) 40%, rgba(135, 110, 153, 0.989) 60%);
+;
+}
+.hello{
+    /* background-color: black; */
+    background: linear-gradient(
+        to left,
+        #fd004c,
+        #b102b7
+    );
+}
+.h{
+    padding-top: 0.2rem;
+    background-image:-webkit-linear-gradient(65deg, black 30%, grey 70%);
+    font-family: serif;
+    color: wheat;
+}
+
+.logIn-main{
+    background-color: #161616;
+}
+.logIn-h1{
+    margin-right: 55rem;
+    font-family: sans-serif;
+    color: rgb(172, 34, 34);
+}
+.logIn-h2{
+    padding-left: 0.1rem;
+    color: white;
+}
+@media(max-width:830){
+    .mid{
+        font-size: 35%;
+    }
+}
+
