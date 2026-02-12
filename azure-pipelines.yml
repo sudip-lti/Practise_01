@@ -15,6 +15,7 @@ steps:
     npm -v
     npm install
     npm run build
+  workingDirectory: FRONTEND
   displayName: 'Build React App'
 
 - script: |
