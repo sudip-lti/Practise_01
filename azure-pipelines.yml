@@ -19,7 +19,7 @@ steps:
 
 - script: |
     echo Copying build output to server folder
-    xcopy build "C:\u01\buildsrv\react_app" /E /I /Y
+    xcopy build "/u01/buildsrv/AzureDevopAutomation_Practice" /E /I /Y
 
     echo Deployment successfully
   displayName: "Deploy in winScp server folder"
