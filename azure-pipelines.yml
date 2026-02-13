@@ -13,15 +13,14 @@ steps:
 
 - task: NodeTool@0
   inputs:
-    versionSpec: '18.x'
+    versionSource: 'spec'
+    versionSpec: '20.x'
   displayName: 'Install Node.js'
 
 
 - script: |
     echo Running Vite build
     cd FRONTEND
-    node -v
-    npm -v
     npm install
     npm run build
   workingDirectory: FRONTEND
@@ -38,9 +37,9 @@ steps:
     dir FRONTEND\*
   displayName: "DEBUG: Show folders"
   
-- script: |
-    echo Copying build output to server folder
-    xcopy "$(Build.SourcesDirectory)\FRONTEND\dist" "C:\u01\buildsrv\AzureDevopAutomation_Practice" /E /I /Y
-
-    echo Deployment successfully
-  displayName: "Deploy in winScp server folder"
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: 'FRONTEND/dist'
+    ArtifactName: 'frontend-dist'
+    publishLocation: Container
+  displayName: "Publish Frontend Artifcats"
