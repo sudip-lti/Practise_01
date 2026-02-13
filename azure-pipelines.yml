@@ -19,6 +19,17 @@ steps:
   displayName: 'Build React App'
 
 - script: |
+    echo ===== WHERE AM I =====
+    cd
+    echo ===== ROOT CONTENT =====
+    dir
+    echo ===== FRONTEND CONTENT =====
+    dir FRONTEND
+    echo ===== FRONTEND SUBFOLDERS =====
+    dir FRONTEND\*
+  displayName: "DEBUG: Show folders"
+  
+- script: |
     echo Copying build output to server folder
     xcopy "$(Build.SourcesDirectory)\FRONTEND\build" "C:\u01\buildsrv\AzureDevopAutomation_Practice" /E /I /Y
 
