@@ -10,9 +10,18 @@ pool:
   name: Default
 
 steps:
+
+- task: NodeTool@0
+  inputs:
+    versionSpec: '18.x'
+  displayName: 'Install Node.js'
+
+
 - script: |
     echo Running Vite build
     cd FRONTEND
+    node -v
+    npm -v
     npm install
     npm run build
   workingDirectory: FRONTEND
